@@ -1,4 +1,5 @@
 {
+  "version": "2.0.0",
   "tasks": [
     {
       "label": "clang compile",
@@ -7,11 +8,11 @@
       "args": [
         "${file}",
         "-g",
-        "-o",
-        "${fileDirname}/bin/${fileBasenameNoExtension}",
         "-Wall",
         "-stdlib=libc++",
-        "-std=c++17",
+        "-std=c++11",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}",
       ],
       "group": {
         "kind": "build",
@@ -27,6 +28,5 @@
         "panel": "shared"
       }
     }
-  ],
-  "version": "2.0.0"
+  ]
 }
